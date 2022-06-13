@@ -1,0 +1,99 @@
+.about {
+  position: relative;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font;
+
+  .about-title {
+    font-size: 3em;
+    font-weight: 700;
+    color: $blue;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+  }
+
+  .about-content {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card {
+      position: relative;
+      z-index: 100;
+      border-radius: 20px;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+      width: 600px;
+      height: 300px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: $grey;
+
+      .item {
+        width: 90%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .progress {
+          width: 50%;
+          height: 50px;
+          border-radius: 25px;
+          position: relative;
+          z-index: 100;
+          overflow: hidden;
+          border: 1px solid $blue;
+
+          .progress-bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            background-color: $blue;
+          }
+        }
+      }
+
+      .about-text {
+        color: $blue;
+      }
+    }
+
+    .custom-shape-divider-bottom-1654692644 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1654692644 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 101px;
+    }
+
+    .custom-shape-divider-bottom-1654692644 .shape-fill {
+      fill: $blue;
+    }
+  }
+}
