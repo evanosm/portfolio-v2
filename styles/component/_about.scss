@@ -57,7 +57,8 @@
           position: relative;
           z-index: 100;
           overflow: hidden;
-          border: 1px solid $blue;
+          background-color: #5692fe50;
+          overflow: hidden;
 
           .progress-bar {
             height: 100%;
@@ -66,12 +67,52 @@
             justify-content: center;
             border-radius: 25px;
             background-color: $blue;
+            border: 5px solid $grey;
+            box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.2);
           }
         }
       }
 
       .about-text {
         color: $blue;
+      }
+
+      .coordinates {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        div {
+
+          width: 80%;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        
+          .icon {
+            width: 30px;
+            height: 30px;
+            background-color: $blue;
+            color: $grey;
+            margin-right: .5em;
+            border: 5px solid $blue;
+            border-radius: 5px;
+          }
+
+          span {
+            margin-left: .5em;
+            a {
+              color: $blue;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+        }
+        
       }
     }
 
@@ -95,5 +136,12 @@
     .custom-shape-divider-bottom-1654692644 .shape-fill {
       fill: $blue;
     }
+  }
+}
+
+
+@media (max-width: 1340px) {
+  .about {
+    height: 200vh;
   }
 }

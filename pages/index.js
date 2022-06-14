@@ -8,6 +8,9 @@ import { loadFull } from "tsparticles";
 
 import { useState } from "react";
 
+import {BsPinMapFill} from 'react-icons/bs'
+import {AiFillMail, AiFillLinkedin} from 'react-icons/ai'
+
 const index = () => {
   return (
     <div>
@@ -162,7 +165,7 @@ const Hero = () => {
               transition={{ type: "spring", duration: 0.5 }}
               className="to-about"
             >
-              Who am I ? 🐱‍👤
+              Who am I ?
             </motion.button>
           </Link>
         </div>
@@ -188,7 +191,7 @@ const About = () => {
   const [isOnScreen, setIsOnScreen] = useState(false);
 
   const parallax = useParallax({
-    speed: 10,
+    speed: 5,
   });
 
   return (
@@ -207,52 +210,63 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{type: 'spring', duration: 2, delay: 0.5}}
+            transition={{type: 'spring', duration: 2, delay: 0.5}} className="card">
+              <div className="coordinates">
+                <div><BsPinMapFill className="icon"/> - <span><a href="http://maps.google.com/?q=1079 Avenue de l'Epine, 76500 Elbeuf">1079 Avenue de l'Épine, 76500 Elbeuf, France</a></span></div>                  
+                <div><AiFillMail className="icon"/> - <span><a href="mailto:evan.osmont@gmail.com">evan.osmont@gmail.com</a></span></div>                  
+                <div><AiFillLinkedin className="icon"/> - <span><a href="https://www.linkedin.com/in/evanosmont">My linkedin profile</a></span></div>                 
+              </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{type: 'spring', duration: 2, delay: 1}}
           className="card">
             <div className="item">
               <h2 className="item-title">Frontend</h2>
               <div className="progress">
-                <div className="progress-bar" style={{ width: "80%" }}>80%</div>
+                <motion.div
+                initial={{width: "20%"}}
+                animate={{width: "80%"}}
+                transition={{duration: 1, delay: 1}}
+                className="progress-bar"></motion.div>
               </div>
             </div>
             
             <div className="item">
               <h2 className="item-title">Backend</h2>
               <div className="progress">
-                <div className="progress-bar" style={{ width: "30%" }}>30%</div>
+                <motion.div
+                initial={{width: "20%"}}
+                animate={{width: "30%"}}
+                transition={{duration: 1, delay: 1.2}} className="progress-bar"></motion.div>
               </div>
             </div>
             
             <div className="item">
               <h2 className="item-title">Video Editing</h2>
               <div className="progress">
-                <div className="progress-bar" style={{ width: "80%" }}>80%</div>
+                <motion.div
+                initial={{width: "20%"}}
+                animate={{width: "80%"}}
+                transition={{duration: 1, delay: 1.4}} className="progress-bar"></motion.div>
               </div>
             </div>
             
             <div className="item">
-              <h2 className="item-title">React</h2>
+              <h2 className="item-title">UI/UX Design</h2>
               <div className="progress">
-                <div className="progress-bar" style={{ width: "80%" }}>80%</div>
+                <motion.div
+                initial={{width: "20%"}}
+                animate={{width: "50%"}}
+                transition={{duration: 1, delay: 1.6}} className="progress-bar"></motion.div>
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{type: 'spring', duration: 2, delay: 1}} className="card">
-            <p>
-              I'm a web developer with a passion for building things that people
-              love.
-            </p>
-          </motion.div>
-
           <div className="card">
-            <p>
-              I'm a web developer with a passion for building things that people
-              love.
-            </p>
+
           </div>
 
           <div className="card">
